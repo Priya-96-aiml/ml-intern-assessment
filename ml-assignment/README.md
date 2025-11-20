@@ -4,26 +4,22 @@ This repository implements a Trigram Language Model in Python. The model predict
 
 ## How to Run
 # 1. Clone Repository
-git clone https://github.com/Priya-96-aiml/ml-intern-assessment.git
-cd ml-intern-assessment/ml-assignment
+       # git clone https://github.com/Priya-96-aiml/ml-intern-assessment.git
+       # cd ml-intern-assessment/ml-assignment
 
 # 2. Run on Small Corpus
-python3 src/generate.py
-
-
-Uses data/example_corpus.txt
-
-Trains the trigram model
-
-Generates 30-word sample text
+         # python3 src/generate.py
+ * Uses data/example_corpus.txt
+ * Trains the trigram model
+ * Generates 30-word sample text
 
 # 3. Run on Large Dataset (Colab Recommended)
 
 Upload or Mount Dataset
 
-from google.colab import drive
-drive.mount('/content/drive')
-file_path = "/content/drive/MyDrive/large_dataset.txt"
+       # from google.colab import drive
+        drive.mount('/content/drive')
+        file_path = "/content/drive/MyDrive/large_dataset.txt"
 
 
 Load, Train, and Generate Text
