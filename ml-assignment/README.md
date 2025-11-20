@@ -85,22 +85,19 @@ Optional seed utilities ensure reproducible results
 ## Folder Structure
 ml-assignment/
 
-│
-├── data/
-
-│    ├── example_corpus.txt
-│    └── large_dataset.txt
-│
-├── src/
-
-│    ├── ngram_model.py
-│    ├── utils.py
-│    └── generate.py
-│
-├── notebooks/
-
-│    └── large_dataset_colab.ipynb  # Optional demo in Colab
-│
-└── tests/
-
-     └── test_ngram.py
+ 
+    │
+    ├── data/
+    │    ├── example_corpus.txt
+    │    └── large_dataset.txt
+    │
+    ├── src/
+    │    ├── ngram_model.py
+    │    ├── utils.py
+    │    └── generate.py
+    │
+    ├── notebooks/
+    │    └── large_dataset_colab.ipynb  # Optional demo in Colab
+    │
+    └── tests/
+        └── test_ngram.py
