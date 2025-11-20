@@ -1,64 +1,76 @@
+
 import random
-from utils import clean_text, tokenize
+import re
+from collections import defaultdict
+from typing import List, Tuple, Optional
 
 class TrigramModel:
-    def __init__(self):
+    def __init__(self, seed: Optional[int] = None):
         """
-        Initializes the trigram model.
+        Trigram model for text generation.
+        :param seed: Optional random seed for reproducibility.
         """
-        self.trigrams = {}
-        self.start_tokens = ('<s>', '<s>')
-        self.has_data = False  # Used for empty-text handling
+        self.trigrams: dict[Tuple[str, str], List[str]] = defaultdict(list)
+        self.tokens: List[str] = []
+        if seed is not None:
+            random.seed(seed)
 
-    def fit(self, text):
+    def _tokenize(self, text: str) -> List[str]:
         """
-        Train the trigram model on the given text.
+        Tokenize input text:
+        - Lowercase
+        - Remove punctuation
+        - Split on whitespace
         """
-        text = clean_text(text)
-        words = tokenize(text)
+        if not text:
+            return []
+        text = text.lower()
+        text = re.sub(r"[^\w\s']", "", text)  # keep apostrophes
+        tokens = text.split()
+        return tokens
 
-        # Handle empty or too-short input
-        if len(words) == 0:
-            self.trigrams = {}
-            self.has_data = False
-            return
-
-        self.has_data = True
-
-        # Add start and end tokens
-        words = ['<s>', '<s>'] + words + ['</s>']
-
-        # Build trigram counts
-        for i in range(len(words) - 2):
-            w1, w2, w3 = words[i], words[i+1], words[i+2]
-            key = (w1, w2)
-            if key not in self.trigrams:
-                self.trigrams[key] = []
-            self.trigrams[key].append(w3)
-
-    def generate(self, max_length=50):
+    def fit(self, text: str):
         """
-        Generate text using the trained trigram model.
+        Build trigram dictionary from text.
         """
-        if not self.has_data:
+        self.tokens = self._tokenize(text)
+        self.trigrams.clear()
+
+        if len(self.tokens) < 3:
+            return  # Not enough tokens for trigram
+
+        for i in range(len(self.tokens) - 2):
+            key = (self.tokens[i], self.tokens[i + 1])
+            next_word = self.tokens[i + 2]
+            self.trigrams[key].append(next_word)
+
+    def generate(self, max_words: int = 20, start_bigram: Optional[Tuple[str, str]] = None) -> str:
+        """
+        Generate text based on trigrams.
+        :param max_words: Maximum number of words to generate
+        :param start_bigram: Optional starting bigram tuple
+        :return: Generated text string
+        """
+        if not self.tokens:
             return ""
 
-        w1, w2 = self.start_tokens
-        output = []
+        if not self.trigrams:
+            return " ".join(self.tokens)
 
-        for _ in range(max_length):
-            key = (w1, w2)
+        if start_bigram and start_bigram in self.trigrams:
+            current_bigram = start_bigram
+        else:
+            current_bigram = random.choice(list(self.trigrams.keys()))
 
-            # No possible next word
-            if key not in self.trigrams:
+        output_words = [current_bigram[0], current_bigram[1]]
+
+        for _ in range(max_words):
+            next_words = self.trigrams.get(current_bigram)
+            if not next_words:
                 break
+            next_word = random.choice(next_words)
+            output_words.append(next_word)
+            current_bigram = (current_bigram[1], next_word)
 
-            next_word = random.choice(self.trigrams[key])
+        return " ".join(output_words)
 
-            if next_word == '</s>':
-                break
-
-            output.append(next_word)
-            w1, w2 = w2, next_word
-
-        return " ".join(output)
