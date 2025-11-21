@@ -5,14 +5,14 @@ This directory contains the core implementation files for the Trigram Language M
 ## How to Run 
 
 1 Clone the Repository
-git clone https://github.com/VarshiniAG/ml-intern-assessment.git
-cd ml-intern-assessment
+      git clone https://github.com/VarshiniAG/ml-intern-assessment.git
+     cd ml-intern-assessment
 
 2️ Prepare the Environment
 
 Install required dependencies (if any new ones are added later):
 
-pip install -r requirements.txt
+     pip install -r requirements.txt
 
 3️ Run the Trigram Model
 python generate.py
