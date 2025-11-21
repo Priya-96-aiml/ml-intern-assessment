@@ -59,8 +59,9 @@ Where:
 
 1. **Clone the repository**:
 
-    !git clone https://github.com/Priya-96-aiml/ml-intern-assessment.git
-    %cd "ml-intern-assignment/AIML Intern assignment"
+
+         !git clone https://github.com/Priya-96-aiml/ml-intern-assessment.git
+         %cd "ml-intern-assignment/AIML Intern assignment"
 
 
 Install dependencies:
