@@ -47,9 +47,10 @@ The **Trigram Language Model** project focuses on:
 
 1. **Clone the repository**
 
-git clone https://github.com/VarshiniAG/ml-intern-assessment.git
-cd ml-assignment
-Create a virtual environment (optional)
+   git clone https://github.com/VarshiniAG/ml-intern-assessment.git
+   
+   cd ml-assignment
+* Create a virtual environment (optional)
 
 Copy code
 python3 -m venv venv
