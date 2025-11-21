@@ -7,14 +7,14 @@ It demonstrates the implementation of an n-gram language model capable of genera
 
 ## 📂 Project Structure
 
-ml-assignment/
-│
-├─ data/ → Dataset files used for training/testing
-├─ src/ → Source code
-│ └─ generate.py → Main trigram model implementation
-├─ tests/ → Unit tests ensuring correctness
-├─ README.md → This file
-└─ evaluation.md → Design choices and technical decisions summary
+   ml-assignment/
+   │
+  ├─ data/ → Dataset files used for training/testing
+  ├─ src/ → Source code
+  │ └─ generate.py → Main trigram model implementation
+  ├─ tests/ → Unit tests ensuring correctness
+  ├─ README.md → This file
+  └─ evaluation.md → Design choices and technical decisions summary
 
 
 
@@ -52,20 +52,18 @@ source venv/bin/activate       # Linux / macOS
 venv\Scripts\activate          # Windows
 Install dependencies
 
-bash
-Copy code
+
 pip install -r requirements.txt
 Run the trigram model
 
-bash
-Copy code
+
 python src/generate.py
 Run tests
 
-bash
-Copy code
+
 python -m unittest discover tests
-📝 Design Highlights
+
+## Design Highlights
 Tokenization: Lowercasing, punctuation removal, whitespace splitting
 
 Unknown Words: Handled with <UNK> token for robustness
