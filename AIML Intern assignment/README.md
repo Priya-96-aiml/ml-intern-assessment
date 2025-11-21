@@ -8,12 +8,19 @@ It demonstrates the implementation of an n-gram language model capable of genera
 ## 📂 Project Structure
 
    ml-assignment/
+   
    │
+   
    ├─ data/ → Dataset files used for training/testing
+   
    ├─ src/ → Source code
+   
    │ └─ generate.py → Main trigram model implementation
+   
    ├─ tests/ → Unit tests ensuring correctness
+   
    ├─ README.md → This file
+   
    └─ evaluation.md → Design choices and technical decisions summary
 
 
