@@ -10,7 +10,7 @@ ml-assignment/
     │
     ├── data/
     │    ├── example_corpus.txt
-    │    └── large_dataset.txt
+    │    
     │
     ├── src/
     │    ├── ngram_model.py
