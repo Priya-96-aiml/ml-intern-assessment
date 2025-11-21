@@ -55,20 +55,20 @@ The **Trigram Language Model** project focuses on:
 Copy code
 python3 -m venv venv
 # Activate the environment
-source venv/bin/activate       # Linux / macOS
-venv\Scripts\activate          # Windows
+    # source venv/bin/activate       ( Linux / macOS)
+      # venv\Scripts\activate          ( Windows)
 Install dependencies
 
 
-pip install -r requirements.txt
+       # pip install -r requirements.txt
 Run the trigram model
 
 
-python src/generate.py
+         # python src/generate.py
 Run tests
 
 
-python -m unittest discover tests
+          # python -m unittest discover tests
 
 ## Design Highlights
 Tokenization: Lowercasing, punctuation removal, whitespace splitting
