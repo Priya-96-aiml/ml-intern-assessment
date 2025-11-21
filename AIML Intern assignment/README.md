@@ -9,12 +9,12 @@ It demonstrates the implementation of an n-gram language model capable of genera
 
    ml-assignment/
    │
-  ├─ data/ → Dataset files used for training/testing
-  ├─ src/ → Source code
-  │ └─ generate.py → Main trigram model implementation
-  ├─ tests/ → Unit tests ensuring correctness
-  ├─ README.md → This file
-  └─ evaluation.md → Design choices and technical decisions summary
+   ├─ data/ → Dataset files used for training/testing
+   ├─ src/ → Source code
+   │ └─ generate.py → Main trigram model implementation
+   ├─ tests/ → Unit tests ensuring correctness
+   ├─ README.md → This file
+   └─ evaluation.md → Design choices and technical decisions summary
 
 
 
@@ -39,12 +39,11 @@ The **Trigram Language Model** project focuses on:
 ## 🔧 How to Run
 
 1. **Clone the repository**
-```bash
+
 git clone https://github.com/VarshiniAG/ml-intern-assessment.git
 cd ml-assignment
 Create a virtual environment (optional)
 
-bash
 Copy code
 python3 -m venv venv
 # Activate the environment
@@ -80,7 +79,7 @@ Testing: Unit tests ensure correctness and maintainability
 
 Full reasoning and technical decisions are documented in evaluation.md.
 
-🌟 Key Takeaways & Skills Demonstrated
+## Key Takeaways & Skills Demonstrated
 Strong grasp of language modeling and n-gram probabilities
 
 Proficient in Python coding, modular design, and testing
@@ -89,7 +88,7 @@ Emphasis on robustness and maintainability
 
 Prepared for real-world NLP and AI/ML projects
 
-🔮 Future Enhancements
+ ## Future Enhancements
 Higher-order n-grams and smoothing techniques for improved predictions
 
 Train on larger, more diverse datasets for richer outputs
@@ -98,7 +97,7 @@ Deploy as a web application for interactive text generation
 
 Optimize for performance and scalability on large datasets
 
-✅ Conclusion
+## Conclusion
 This project demonstrates a working, efficient, and robust trigram language model, highlighting strategic thinking, attention to detail, and professional readiness.
 It is designed to impress recruiters and demonstrate both technical competence and business-ready problem-solving skills.
 
