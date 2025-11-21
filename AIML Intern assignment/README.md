@@ -2,7 +2,7 @@
 
 This repository contains the **Scaled Dot-Product Attention** implementation and a **Trigram Language Model** as part of the AIML internship assignment. The project focuses on **clarity, modularity, and testability**, fully compatible with Google Colab.
 
--
+
 
 ##  Project Structure
 
