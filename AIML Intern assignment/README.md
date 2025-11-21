@@ -4,24 +4,24 @@ This repository contains the **Trigram Language Model** assignment, part of the 
 It demonstrates the implementation of an n-gram language model capable of generating meaningful text sequences while highlighting **technical proficiency, clean coding practices, and problem-solving skills**.
 
 ---
+ml-assignment/
 
-## 📂 Project Structure
-
-   ml-assignment/
-   
-   │
-   
-   ├─ data/ → Dataset files used for training/testing
-   
-   ├─ src/ → Source code
-   
-   │ └─ generate.py → Main trigram model implementation
-   
-   ├─ tests/ → Unit tests ensuring correctness
-   
-   ├─ README.md → This file
-   
-   └─ evaluation.md → Design choices and technical decisions summary
+ 
+    │
+    ├── data/
+    │    ├── example_corpus.txt
+    │    └── large_dataset.txt
+    │
+    ├── src/
+    │    ├── ngram_model.py
+    │    ├── utils.py
+    │    └── generate.py
+    │
+    ├── notebooks/
+    │    └── large_dataset_colab.ipynb  # Optional demo in Colab
+    │
+    └── tests/
+        └── test_ngram.py
 
 
 
@@ -43,7 +43,7 @@ The **Trigram Language Model** project focuses on:
 
 ---
 
-## 🔧 How to Run
+## How to Run
 
 1. **Clone the repository**
 
