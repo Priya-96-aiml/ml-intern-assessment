@@ -1,9 +1,11 @@
 import unittest
 import numpy as np
 import sys, os
+
+# Add src folder to path
 sys.path.append(os.path.join(os.getcwd(), "src"))
 
-
+# Correct imports
 from attention import scaled_dot_product_attention
 from utils import create_mask
 
@@ -24,7 +26,7 @@ class TestScaledDotProductAttention(unittest.TestCase):
         mask = create_mask(2, 2, 'causal')
         output, weights = scaled_dot_product_attention(self.Q, self.K, self.V, mask)
         np.testing.assert_almost_equal(output.shape, (1,2,2))
-        self.assertEqual(weights[0,0,1], 0.0)  # Masked position
+        self.assertEqual(weights[0,0,1], 0.0)
 
     def test_batch_attention(self):
         Q_batch = np.array([self.Q[0], self.Q[0]])
@@ -36,4 +38,3 @@ class TestScaledDotProductAttention(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(argv=[''], exit=False)
-
