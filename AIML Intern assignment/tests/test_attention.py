@@ -1,9 +1,8 @@
 import unittest
 import numpy as np
 import sys, os
-
-# Add src folder to path
 sys.path.append(os.path.join(os.getcwd(), "src"))
+
 
 from attention import scaled_dot_product_attention
 from utils import create_mask
