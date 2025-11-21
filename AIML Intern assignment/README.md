@@ -47,28 +47,28 @@ The **Trigram Language Model** project focuses on:
 
 1. **Clone the repository**
 
-   git clone https://github.com/VarshiniAG/ml-intern-assessment.git
+        # git clone https://github.com/VarshiniAG/ml-intern-assessment.git
    
-   cd ml-assignment
+        # cd ml-assignment
 * Create a virtual environment (optional)
 
-Copy code
-python3 -m venv venv
+
+          # python3 -m venv venv
 # Activate the environment
-    # source venv/bin/activate       ( Linux / macOS)
-      # venv\Scripts\activate          ( Windows)
+          source venv/bin/activate       ( Linux / macOS)
+          venv\Scripts\activate          ( Windows)
 Install dependencies
 
 
-       # pip install -r requirements.txt
+        pip install -r requirements.txt
 Run the trigram model
 
 
-         # python src/generate.py
+          python src/generate.py
 Run tests
 
 
-          # python -m unittest discover tests
+           python -m unittest discover tests
 
 ## Design Highlights
 Tokenization: Lowercasing, punctuation removal, whitespace splitting
